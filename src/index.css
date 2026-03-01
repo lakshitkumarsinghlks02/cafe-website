@@ -1,13 +1,94 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f8f5f2;
+  color: #333;
+}
+
+section {
+  padding: 80px 10%;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+button {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  background: #6f4e37;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #4b2e1e;
+  transform: scale(1.05);
+}
+
+
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1509042239860-f550ce710b93") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 20px;
+}
+
+/* Position pagination properly */
+.swiper-pagination {
+  bottom: 0px !important;
+}
+
+/* Default dots (outline circle) */
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background: transparent;
+  /* empty inside */
+  border: 2px solid #3b82f6;
+  /* blue border */
+  border-radius: 50%;
+  opacity: 1;
+  margin: 0 6px !important;
+  transition: all 0.3s ease;
+}
+
+/* Active dot (filled circle) */
+.swiper-pagination-bullet-active {
+  background: #2563eb;
+  /* full blue fill */
+  border: 2px solid #2563eb;
+  transform: scale(1.2);
 }

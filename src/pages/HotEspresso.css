@@ -1,0 +1,42 @@
+.espresso-page {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.espresso-page h1 {
+  font-size: 42px;
+  margin-bottom: 40px;
+}
+
+.espresso-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.espresso-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.4s;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.espresso-card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+.espresso-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.espresso-card h3 {
+  margin: 15px 0 5px;
+}
+
+.espresso-card p {
+  padding: 0 15px 20px;
+  color: #555;
+}
