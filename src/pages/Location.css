@@ -1,0 +1,94 @@
+.location-page {
+  background: linear-gradient(to right, #f8f5f0, #f4f1ea);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* HERO */
+.location-hero {
+  height: 50vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1400&q=80&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.location-hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.location-hero p {
+  font-size: 18px;
+  max-width: 600px;
+}
+
+/* CONTENT */
+.location-content {
+  padding: 100px 10%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* CARD */
+.location-card {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+}
+
+.location-card:hover {
+  transform: translateY(-8px);
+}
+
+.location-card h2 {
+  margin-bottom: 25px;
+}
+
+.location-details p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.direction-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: #6f4e37;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.direction-btn:hover {
+  background: #3b82f6;
+}
+
+/* MAP */
+.map-container {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: 0.4s;
+}
+
+.map-container:hover {
+  transform: scale(1.02);
+}
