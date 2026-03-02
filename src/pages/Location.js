@@ -64,7 +64,7 @@ function Location() {
           viewport={{ once: true }}
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d609.1280099933679!2d77.50038125197838!3d23.241204306391722!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1772457989918!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418.42891317043944!2d77.46568408556755!3d23.25010288088191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c4395957b8a37%3A0xa469f9e703425b9!2sNothing%20Before%20Coffee%20-%20Indrapuri%2C%20Bhopal!5e1!3m2!1sen!2sin!4v1772460556166!5m2!1sen!2sin"
             width="100%"
             height="450"
             style={{ border: 0 }}
