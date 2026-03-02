@@ -1,35 +1,75 @@
-.menu-container {
-  padding-top: 120px;
+.menu-page {
+  font-family: Arial, sans-serif;
+  background: #f9f6f1;
+}
+
+/* Hero Section */
+.menu-hero {
+  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1509042239860-f550ce710b93");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+.menu-hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
 }
 
-.card {
-  background: white;
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: 0.3s ease;
+.menu-hero p {
+  font-size: 18px;
 }
 
-.card img {
-  width: 100%;
-  border-radius: 15px;
+/* Sections */
+.menu-section {
+  padding: 60px 10%;
 }
 
-.card:hover {
-  transform: translateY(-10px);
+.menu-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  border-left: 5px solid #c59d5f;
+  padding-left: 15px;
 }
 
-.card span {
-  display: block;
-  margin-top: 10px;
-  font-weight: 600;
-  color: #6f4e37;
+/* Menu Items */
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.menu-item h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.menu-item p {
+  font-size: 14px;
+  color: #555;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #c59d5f;
+}
+
+/* Popular Badge */
+.badge {
+  background: #c59d5f;
+  color: white;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 5px;
+  margin-left: 8px;
 }
