@@ -1,21 +1,101 @@
-.gallery-container {
-  padding-top: 120px;
-  text-align: center;
+.gallery-page {
+  background: #f4f1ea;
+  font-family: 'Poppins', sans-serif;
 }
 
+/* HERO */
+.gallery-hero {
+  height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FILTER BUTTONS */
+.filter-buttons {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.filter-buttons button {
+  margin: 10px;
+  padding: 10px 25px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: #ddd;
+  transition: 0.3s;
+}
+
+.filter-buttons .active {
+  background: #c59d5f;
+  color: white;
+}
+
+/* GRID */
 .gallery-grid {
-  margin-top: 40px;
+  padding: 0 10% 80px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 25px;
 }
 
-.gallery-grid img {
-  width: 100%;
+.gallery-card {
+  overflow: hidden;
   border-radius: 20px;
-  transition: 0.3s ease;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
-.gallery-grid img:hover {
-  transform: scale(1.05);
+.gallery-card img {
+  width: 100%;
+  height: 250px;
+  /* fixed height improves loading */
+  object-fit: cover;
+  transition: 0.4s ease;
+  display: block;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.1);
+}
+
+/* LIGHTBOX */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 80%;
+  border-radius: 20px;
+}
+
+.filter-buttons button {
+  background: #e0d6c3;
+  color: #333;
+  font-weight: 600;
+}
+
+.filter-buttons button:hover {
+  background: #c59d5f;
+  color: white;
+}
+
+.filter-buttons button.active {
+  background: #c59d5f !important;
+  color: white !important;
 }
