@@ -92,3 +92,63 @@ button:hover {
   border: 2px solid #2563eb;
   transform: scale(1.2);
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-container h1 {
+    font-size: 28px;
+  }
+
+  .home-container p {
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
+
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+
+  /* Center text only in mobile */
+  h1 {
+    text-align: center;
+  }
+
+  /* Remove emoji only in mobile */
+  .coffee-emoji {
+    display: none;
+  }
+
+}

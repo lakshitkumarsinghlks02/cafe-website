@@ -145,3 +145,18 @@
   font-weight: bold;
   margin: 20px 0;
 }
+
+@media (max-width: 768px) {
+
+  .menu-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+
+}

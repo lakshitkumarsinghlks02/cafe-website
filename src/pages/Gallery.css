@@ -90,3 +90,11 @@
   max-width: 80%;
   border-radius: 20px;
 }
+
+@media (max-width: 768px) {
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+}

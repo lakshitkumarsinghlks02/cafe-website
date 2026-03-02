@@ -92,3 +92,12 @@
 .map-container:hover {
   transform: scale(1.02);
 }
+
+@media (max-width: 768px) {
+
+  .location-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+}

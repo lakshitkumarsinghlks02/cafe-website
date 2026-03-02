@@ -55,7 +55,7 @@ function Home() {
       >
         <div>
           <h1 style={{ fontSize: "60px", fontWeight: "700" }}>
-            Brew Haven Cafe ☕
+            Brew Haven Cafe <span className="coffee-emoji">☕</span>
           </h1>
           <p style={{ fontSize: "22px", marginTop: "20px" }}>
             Fresh Coffee. Cozy Vibes. Perfect Moments.

@@ -40,3 +40,12 @@
   padding: 0 15px 20px;
   color: #555;
 }
+
+@media (max-width: 768px) {
+
+  .hot-espresso-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
