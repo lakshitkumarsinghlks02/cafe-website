@@ -3,6 +3,11 @@ import "./Menu.css";
 import { motion } from "framer-motion";
 
 function Menu() {
+  const cardHover = {
+    whileHover: { scale: 1.05 },
+    whileTap: { scale: 0.98 }
+  };
+
   return (
     <div className="menu-page">
 
@@ -13,85 +18,129 @@ function Menu() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Discover Our Menu
+          Experience Our Flavors
         </motion.h1>
-
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
+          transition={{ delay: 0.5 }}
         >
-          Crafted with passion. Served with perfection.
+          Where taste meets perfection ☕
         </motion.p>
       </section>
 
-      {/* MENU SECTION */}
+      {/* COFFEE SECTION */}
       <section className="menu-section">
-        <h2>☕ Coffee</h2>
-
+        <h2>☕ Signature Coffee</h2>
         <div className="menu-grid">
 
-          <motion.div
-            className="menu-card"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-          >
+          <motion.div className="menu-card" {...cardHover}>
             <h3>Espresso</h3>
-            <p>Rich bold shot of premium roasted beans.</p>
+            <p>Premium roasted beans with intense aroma.</p>
             <span>₹120</span>
+            <p className="rating">⭐⭐⭐⭐☆</p>
             <button>Order Now</button>
           </motion.div>
 
-          <motion.div
-            className="menu-card"
-            whileHover={{ scale: 1.05 }}
-          >
-            <h3>Cappuccino</h3>
-            <p>Perfect espresso with silky milk foam.</p>
-            <span>₹180</span>
+          <motion.div className="menu-card" {...cardHover}>
+            <h3>Hazelnut Latte</h3>
+            <p>Creamy milk with sweet hazelnut flavor.</p>
+            <span>₹240</span>
+            <p className="rating">⭐⭐⭐⭐⭐</p>
             <button>Order Now</button>
           </motion.div>
 
-          <motion.div
-            className="menu-card"
-            whileHover={{ scale: 1.05 }}
-          >
-            <h3>Caramel Latte</h3>
-            <p>Sweet caramel blended with creamy milk.</p>
+          <motion.div className="menu-card" {...cardHover}>
+            <h3>Mocha</h3>
+            <p>Chocolate infused espresso delight.</p>
             <span>₹220</span>
+            <p className="rating">⭐⭐⭐⭐☆</p>
             <button>Order Now</button>
           </motion.div>
 
         </div>
       </section>
 
-      {/* DESSERT SECTION */}
+      {/* BREAKFAST */}
       <section className="menu-section dark-section">
-        <h2>🍰 Desserts</h2>
-
+        <h2>🥞 Breakfast Specials</h2>
         <div className="menu-grid">
 
-          <motion.div
-            className="menu-card glass"
-            whileHover={{ scale: 1.05 }}
-          >
+          <motion.div className="menu-card glass" {...cardHover}>
+            <h3>Pancake Stack</h3>
+            <p>Fluffy pancakes with maple syrup.</p>
+            <span>₹260</span>
+            <button>Order Now</button>
+          </motion.div>
+
+          <motion.div className="menu-card glass" {...cardHover}>
+            <h3>Avocado Toast</h3>
+            <p>Fresh avocado on multigrain bread.</p>
+            <span>₹280</span>
+            <button>Order Now</button>
+          </motion.div>
+
+        </div>
+      </section>
+
+      {/* DESSERTS */}
+      <section className="menu-section">
+        <h2>🍰 Desserts</h2>
+        <div className="menu-grid">
+
+          <motion.div className="menu-card" {...cardHover}>
             <h3>Chocolate Brownie</h3>
             <p>Warm brownie served with vanilla ice cream.</p>
             <span>₹180</span>
             <button>Order Now</button>
           </motion.div>
 
-          <motion.div
-            className="menu-card glass"
-            whileHover={{ scale: 1.05 }}
-          >
-            <h3>Cheesecake</h3>
-            <p>Creamy New York style cheesecake.</p>
-            <span>₹240</span>
+          <motion.div className="menu-card" {...cardHover}>
+            <h3>Red Velvet Cake</h3>
+            <p>Moist cake layered with cream cheese frosting.</p>
+            <span>₹250</span>
             <button>Order Now</button>
           </motion.div>
 
         </div>
+      </section>
+
+      {/* COLD BEVERAGES */}
+      <section className="menu-section dark-section">
+        <h2>🥤 Cold Beverages</h2>
+        <div className="menu-grid">
+
+          <motion.div className="menu-card glass" {...cardHover}>
+            <h3>Cold Coffee</h3>
+            <p>Chilled coffee blended with ice cream.</p>
+            <span>₹190</span>
+            <button>Order Now</button>
+          </motion.div>
+
+          <motion.div className="menu-card glass" {...cardHover}>
+            <h3>Mango Smoothie</h3>
+            <p>Fresh mango blended with yogurt.</p>
+            <span>₹210</span>
+            <button>Order Now</button>
+          </motion.div>
+
+        </div>
+      </section>
+
+      {/* CHEF SPECIAL */}
+      <section className="menu-section chef-special">
+        <h2>👨‍🍳 Chef’s Special Combo</h2>
+        <motion.div
+          className="special-box"
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h3>Morning Bliss Combo</h3>
+          <p>Hazelnut Latte + Pancake Stack + Brownie</p>
+          <span className="combo-price">₹499 Only</span>
+          <button>Order Combo</button>
+        </motion.div>
       </section>
 
     </div>
