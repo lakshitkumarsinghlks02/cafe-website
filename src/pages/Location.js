@@ -1,10 +1,24 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 import "./Location.css";
 
 function Location() {
   return (
     <div className="location-page">
+
+      {/* SEO */}
+      <Helmet>
+        <title>Brew Haven Cafe Location | Best Coffee Cafe in Bhopal</title>
+        <meta
+          name="description"
+          content="Visit Brew Haven Cafe in Bhopal, Madhya Pradesh. Enjoy fresh coffee, desserts and cozy ambience. Get directions and find our cafe location easily."
+        />
+        <meta
+          name="keywords"
+          content="cafe in Bhopal, coffee shop Bhopal, cafe near me, Brew Haven Cafe location, coffee cafe address"
+        />
+      </Helmet>
 
       {/* HERO SECTION */}
       <section className="location-hero">
@@ -70,7 +84,7 @@ function Location() {
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
-            title="Cafe Location"
+            title="Brew Haven Cafe Location in Bhopal"
           ></iframe>
         </motion.div>
 

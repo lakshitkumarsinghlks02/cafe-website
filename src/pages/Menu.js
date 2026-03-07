@@ -1,6 +1,7 @@
 import React from "react";
 import "./Menu.css";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 function Menu() {
   const cardHover = {
@@ -10,6 +11,19 @@ function Menu() {
 
   return (
     <div className="menu-page">
+
+      {/* SEO */}
+      <Helmet>
+        <title>Cafe Menu | Coffee, Breakfast & Desserts</title>
+        <meta
+          name="description"
+          content="Explore our cafe menu featuring espresso, hazelnut latte, pancakes, desserts, smoothies and cold coffee. Freshly prepared with premium ingredients."
+        />
+        <meta
+          name="keywords"
+          content="cafe menu, coffee menu, espresso, hazelnut latte, pancakes, desserts, cold coffee"
+        />
+      </Helmet>
 
       {/* HERO */}
       <section className="menu-hero">
@@ -147,4 +161,4 @@ function Menu() {
   );
 }
 
-export default Menu;
+export default Menu;  

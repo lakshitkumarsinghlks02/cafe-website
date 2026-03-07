@@ -1,8 +1,9 @@
 import React, { useState, useMemo, useCallback } from "react";
 import "./Gallery.css";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
-// ✅ Keep images outside component (no recreation on re-render)
+// Images outside component
 const images = [
   { id: 1, src: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80&auto=format&fit=crop", category: "coffee" },
   { id: 2, src: "https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=800&q=80&auto=format&fit=crop", category: "dessert" },
@@ -18,14 +19,12 @@ function Gallery() {
   const [filter, setFilter] = useState("all");
   const [selectedImage, setSelectedImage] = useState(null);
 
-  // ✅ useMemo prevents recalculating filter on every render
   const filteredImages = useMemo(() => {
     return filter === "all"
       ? images
       : images.filter((img) => img.category === filter);
   }, [filter]);
 
-  // ✅ useCallback prevents function recreation
   const handleFilter = useCallback((category) => {
     setFilter(category);
   }, []);
@@ -40,6 +39,19 @@ function Gallery() {
 
   return (
     <div className="gallery-page">
+
+      {/* SEO */}
+      <Helmet>
+        <title>Cafe Gallery | Coffee, Desserts & Interior Photos</title>
+        <meta
+          name="description"
+          content="Explore our cafe gallery featuring premium coffee, delicious desserts and modern cafe interior ambience."
+        />
+        <meta
+          name="keywords"
+          content="cafe gallery, coffee photos, cafe interior, dessert photos, coffee shop gallery"
+        />
+      </Helmet>
 
       {/* HERO */}
       <section className="gallery-hero">
@@ -79,7 +91,7 @@ function Gallery() {
           >
             <img
               src={img.src}
-              alt={img.category}
+              alt={`Cafe ${img.category}`}
               loading="lazy"
               decoding="async"
               width="400"
@@ -94,7 +106,7 @@ function Gallery() {
         <div className="lightbox" onClick={closeLightbox}>
           <motion.img
             src={selectedImage.replace("w=800", "w=1200")}
-            alt="preview"
+            alt="Cafe gallery preview"
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.3 }}
@@ -107,5 +119,4 @@ function Gallery() {
   );
 }
 
-// ✅ Prevent unnecessary re-renders
 export default React.memo(Gallery);
