@@ -1,6 +1,6 @@
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
-import { FaInstagram, FaFacebookF, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaWhatsapp } from "react-icons/fa";
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Swiper, SwiperSlide } from "swiper/react";
