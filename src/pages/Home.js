@@ -1,7 +1,6 @@
+import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
 import { FaFacebookF, FaWhatsapp } from "react-icons/fa";
-import React from "react";
 import { Helmet } from "react-helmet";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -195,7 +194,139 @@ function Home() {
       </section>
 
       {/* CONTACT SECTION */}
-      {/* (rest of your code unchanged) */}
+      <section
+        style={{
+          padding: "100px 10%",
+          background: "#f8f8f8",
+          textAlign: "center"
+        }}
+      >
+        <h2 style={{ fontSize: "38px", marginBottom: "40px" }}>
+          Contact Us
+        </h2>
+
+        <div
+          style={{
+            maxWidth: "520px",
+            margin: "auto",
+            background: "white",
+            padding: "40px",
+            borderRadius: "18px",
+            boxShadow: "0 10px 30px rgba(0,0,0,0.1)"
+          }}
+        >
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "18px"
+            }}
+          >
+            <input
+              type="text"
+              name="user_name"
+              placeholder="Your Name"
+              required
+              style={{
+                padding: "14px",
+                borderRadius: "10px",
+                border: "1px solid #ddd",
+                fontSize: "15px"
+              }}
+            />
+
+            <input
+              type="email"
+              name="user_email"
+              placeholder="Your Email"
+              required
+              style={{
+                padding: "14px",
+                borderRadius: "10px",
+                border: "1px solid #ddd",
+                fontSize: "15px"
+              }}
+            />
+
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+              style={{
+                padding: "14px",
+                borderRadius: "10px",
+                border: "1px solid #ddd",
+                height: "120px",
+                fontSize: "15px"
+              }}
+            />
+
+            <button
+              type="submit"
+              style={{
+                padding: "14px",
+                border: "none",
+                borderRadius: "10px",
+                background: "#6f4e37",
+                color: "white",
+                fontSize: "16px",
+                cursor: "pointer",
+                transition: "0.3s"
+              }}
+            >
+              Send Message
+            </button>
+          </form>
+
+          {/* Social Icons */}
+          <div
+            style={{
+              marginTop: "30px",
+              display: "flex",
+              justifyContent: "center",
+              gap: "20px"
+            }}
+          >
+            <a
+              href="https://facebook.com"
+              style={{
+                width: "45px",
+                height: "45px",
+                borderRadius: "50%",
+                background: "#1877f2",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "white",
+                fontSize: "18px",
+                textDecoration: "none"
+              }}
+            >
+              <FaFacebookF />
+            </a>
+
+            <a
+              href="https://wa.me/919999999999"
+              style={{
+                width: "45px",
+                height: "45px",
+                borderRadius: "50%",
+                background: "#25D366",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "white",
+                fontSize: "18px",
+                textDecoration: "none"
+              }}
+            >
+              <FaWhatsapp />
+            </a>
+          </div>
+        </div>
+      </section>
 
     </div>
   );
